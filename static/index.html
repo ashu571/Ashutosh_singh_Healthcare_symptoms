@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Symptom Checker - AI-Powered Health Education</title>
+    <meta name="description"
+        content="Get educational information about potential health conditions based on your symptoms. For educational purposes only - not medical advice.">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background gradient -->
+    <div class="bg-gradient"></div>
+
+    <!-- Main container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">⚕️</div>
+                <h1>Symptom Checker</h1>
+            </div>
+            <p class="tagline">AI-Powered Health Education Assistant</p>
+        </header>
+
+        <!-- Medical Disclaimer Banner -->
+        <div class="disclaimer-banner">
+            <div class="disclaimer-icon">⚠️</div>
+            <div class="disclaimer-content">
+                <strong>Important: Educational Purpose Only</strong>
+                <p>This tool provides educational information and is NOT a substitute for professional medical advice.
+                    Always consult a healthcare provider for medical concerns.</p>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <!-- Input Section -->
+            <section class="input-section card">
+                <h2 class="section-title">Describe Your Symptoms</h2>
+                <p class="section-description">
+                    Please provide a detailed description of your symptoms. Include when they started, their severity,
+                    and any relevant context.
+                </p>
+
+                <form id="symptomForm">
+                    <div class="form-group">
+                        <label for="symptoms" class="form-label">
+                            Your Symptoms
+                            <span class="char-count">
+                                <span id="charCount">0</span>/1000
+                            </span>
+                        </label>
+                        <textarea id="symptoms" name="symptoms" class="form-textarea"
+                            placeholder="Example: I've been experiencing headaches for the past 3 days. The pain is mostly on the left side of my head and gets worse in bright light. I also feel slightly nauseous..."
+                            rows="6" maxlength="1000" required></textarea>
+                        <div class="form-hint">
+                            Tip: Be specific about duration, location, intensity, and any factors that make symptoms
+                            better or worse.
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary" id="analyzeBtn">
+                        <span class="btn-text">Analyze Symptoms</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Loading State -->
+            <div class="loading-container" id="loadingContainer" style="display: none;">
+                <div class="loading-card card">
+                    <div class="spinner"></div>
+                    <h3>Analyzing Your Symptoms...</h3>
+                    <p>Our AI is reviewing your symptoms and gathering educational information.</p>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <!-- Emergency Alert (shown conditionally) -->
+                <div class="emergency-alert" id="emergencyAlert" style="display: none;">
+                    <div class="emergency-icon">🚨</div>
+                    <div class="emergency-content">
+                        <strong>Seek Immediate Medical Attention</strong>
+                        <p>If you're experiencing a medical emergency, call emergency services immediately.</p>
+                    </div>
+                </div>
+
+                <!-- Analysis Results -->
+                <div class="results-card card">
+                    <h2 class="section-title">Analysis Results</h2>
+                    <div id="analysisResults" class="analysis-content"></div>
+
+                    <div class="disclaimer-section">
+                        <h3 class="disclaimer-title">⚕️ Medical Disclaimer</h3>
+                        <div id="disclaimerText" class="disclaimer-text"></div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn-secondary" id="newCheckBtn">
+                            Check New Symptoms
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Metadata -->
+                <div class="metadata-card card" id="metadataCard">
+                    <div class="metadata-item">
+                        <span class="metadata-label">AI Model:</span>
+                        <span class="metadata-value" id="modelName">GPT-4</span>
+                    </div>
+                    <div class="metadata-item">
+                        <span class="metadata-label">Tokens Used:</span>
+                        <span class="metadata-value" id="tokensUsed">0</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <div class="error-container" id="errorContainer" style="display: none;">
+                <div class="error-card card">
+                    <div class="error-icon">❌</div>
+                    <h3>Something Went Wrong</h3>
+                    <p id="errorMessage"></p>
+                    <button class="btn-secondary" id="retryBtn">Try Again</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Healthcare Symptom Checker | Educational Tool Only</p>
+            <p class="footer-note">Powered by AI | Always consult healthcare professionals for medical advice</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
