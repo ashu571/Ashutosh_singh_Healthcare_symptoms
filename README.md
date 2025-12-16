@@ -61,7 +61,7 @@ An AI-powered web application that provides educational information about potent
 ## 📁 Project Structure
 
 ```
-Singh_assign/
+Ashutosh_singh_Healthcare_symptoms/
 ├── app.py                  # Main Flask application
 ├── llm_service.py          # Groq API integration
 ├── database.py             # SQLite database operations
@@ -70,7 +70,6 @@ Singh_assign/
 ├── .env                    # Environment variables (create this)
 ├── .env.example            # Environment template
 ├── .gitignore              # Git ignore rules
-├── start.bat               # Windows startup script
 ├── test_groq.py            # API test script
 ├── README.md               # This file
 └── static/                 # Frontend files
@@ -90,7 +89,7 @@ Singh_assign/
 
 ### Step 1: Clone/Download the Repository
 ```bash
-cd Singh_assign
+cd Ashutosh_singh_Healthcare_symptoms
 ```
 
 ### Step 2: Create Virtual Environment (Recommended)
@@ -171,10 +170,7 @@ RESPONSE_TIMEOUT=30
 python app.py
 ```
 
-### Method 2: Using Startup Script (Windows)
-```bash
-start.bat
-```
+
 
 The application will start on: **http://localhost:5000**
 
@@ -366,6 +362,11 @@ Emergency symptoms include:
 python test_groq.py
 ```
 
+### Run the Project
+```bash
+python app.py
+```
+
 ---
 
 ## 🐛 Troubleshooting
@@ -417,3 +418,4 @@ For issues or questions:
 **Built with ❤️ for educational purposes**
 
 **Remember**: This is an educational tool. Always consult healthcare professionals for medical advice!
+
