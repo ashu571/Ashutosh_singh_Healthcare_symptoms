@@ -23,9 +23,9 @@ An AI-powered web application that provides educational information about potent
   
 
 ---
-
+<img width="1919" height="876" alt="Image" src="https://github.com/user-attachments/assets/0b60ec7d-7b3e-4117-aaee-4b735ba881f2" />
 <img width="1919" height="876" alt="Image" src="https://github.com/user-attachments/assets/c3732536-fa55-4b1d-bda3-7c47d446efec" />
-<img width="1919" height="976" alt="Image" src="https://github.com/user-attachments/assets/eaa6d358-7a70-4908-910d-d07176052f32" />
+
 
 ## ✨ Features
 
@@ -422,5 +422,6 @@ For issues or questions:
 **Built with ❤️ for educational purposes**
 
 **Remember**: This is an educational tool. Always consult healthcare professionals for medical advice!
+
 
 
